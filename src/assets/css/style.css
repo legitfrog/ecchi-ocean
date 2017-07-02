@@ -1,0 +1,179 @@
+
+/* Fonts */
+
+@font-face {
+  font-family: "Inconsolata";
+  font-weight: 400;
+  font-style: normal;
+  src:local("Inconsolata"),
+  url("/assets/fonts/Inconsolata-Regular.woff2"),
+  url("/assets/fonts/Inconsolata-Regular.woff"),
+  url("/assets/fonts/Inconsolata-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-weight: 700;
+  font-style: normal;
+  src:local("Inconsolata Bold"),
+  url("/assets/fonts/Inconsolata-Bold.woff2"),
+  url("/assets/fonts/Inconsolata-Bold.woff"),
+  url("/assets/fonts/Inconsolata-Bold.ttf");
+}
+
+/* Main CSS */
+
+body {
+font-family: "Inconsolata", monospace;
+color: #929EFC;
+background-color:#131313;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  padding-top: 75px;
+}
+
+b {
+  color: #D6DAE4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+footer p {
+  color: #929EFC;
+}
+
+footer a {
+  color: #D6DAE4;
+  text-decoration: none;
+}
+
+.luxbar-item {
+  font-size: 1.6rem;
+}
+
+.luxbar-fixed {
+  width: 100%;
+  max-width: 1160px;
+}
+
+.luxbar a:hover,
+.luxbar a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.stats p {
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
+.see-more {
+  background-color: #212121;
+  border-radius: 10px;
+  width: 25%;
+  height: 3em;
+  position: relative;
+  margin:auto;
+}
+
+.see-more p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+/*
+::-moz-selection {
+background-color: #a7baaa;
+}
+
+::selection {
+  background-color: #a7baaa;
+} */
+
+.footnote {
+  font-size: 1.4rem;
+}
+
+.aside-info {
+  display: inline;
+}
+
+.aside-title {
+  display: inline-block;
+  width: 100px;
+}
+
+.rwd-break {
+  display: block;
+}
+
+.copyright {
+  display: block;
+  float: none;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float:right;
+}
+
+/* Media Queries */
+
+@media (min-width: 320px) {
+.luxbar-fixed  {
+  width: 87.5%;
+}
+}
+
+@media (min-width: 340px) {
+.luxbar-fixed  {
+  width: 89%;
+}
+}
+
+@media (min-width: 400px) {
+.luxbar-fixed {
+  width: 85%;
+}
+.footnote {
+  font-size: 1.6rem;
+}
+}
+
+@media (min-width: 500px) {
+.copyright {
+  float: right;
+}
+}
+
+@media (min-width: 550px) {
+.luxbar-fixed {
+  width: 80%;
+}
+.aside-info {
+  display: block;
+}
+.rwd-break {
+  display: none;
+}
+}
+
+@media (min-width: 1024px) {
+.featured:last-child {
+  display: none;
+}
+}
