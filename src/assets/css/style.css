@@ -77,7 +77,7 @@ footer a {
 .see-more {
   background-color: #212121;
   border-radius: 10px;
-  width: 25%;
+  width: 75%;
   height: 3em;
   position: relative;
   margin:auto;
@@ -90,6 +90,10 @@ footer a {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+}
+
+.featured:nth-last-child(-n + 3) {
+  display: none;
 }
 
 /*
@@ -155,6 +159,9 @@ background-color: #a7baaa;
 }
 
 @media (min-width: 500px) {
+.see-more {
+  width: 50%;
+}
 .copyright {
   float: right;
 }
@@ -172,8 +179,17 @@ background-color: #a7baaa;
 }
 }
 
-@media (min-width: 1024px) {
-.featured:last-child {
-  display: none;
+@media (min-width: 768px) {
+.see-more {
+  width: 25%;
 }
+.featured:nth-child(-n + 4) {
+  display: inline-block;
+}
+}
+
+@media (min-width: 1024px) {
+  .featured:nth-last-child(n + 1) {
+    display: inline-block;
+  }
 }
