@@ -2390,7 +2390,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     box-sizing: border-box;
 }
 .l-box {
-    padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 
 /*
@@ -4708,18 +4708,28 @@ footer a {
   text-decoration: none;
 }
 
+.stats {
+  margin: 0 10px 10px 10px;
+  font-size: 1.6rem;
+}
+
 .stats p {
   font-size: 1.6rem;
+  margin-bottom: 0;
   display: inline-block;
 }
 
 .see-more {
   background-color: #212121;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 75%;
   height: 3em;
   position: relative;
   margin:auto;
+}
+
+.see-more:hover {
+  background-color: #424242;
 }
 
 .see-more p {
@@ -4731,8 +4741,53 @@ footer a {
   transform: translate(-50%, -50%);
 }
 
-.featured:nth-last-child(-n + 3) {
+.featured-video:last-child {
   display: none;
+}
+
+.featured-manga:last-child {
+  display: none;
+}
+
+.featured-video img {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.featured-video h5,
+.featured-manga h5 {
+  font-size: 1.8rem;
+  text-overflow: clip;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.featured-video,
+.featured-manga {
+  background-color: #212121;
+  border-color: #131313;
+  border-width: 10px;
+  border-radius: 20px;
+  border-style: solid;
+}
+
+.thumbnail {
+  border-color: #212121;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.cover {
+  height: 250px;
+  width: auto;
+  margin: auto;
+  display: block;
+  border-color: #212121;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
 }
 
 /*
@@ -4766,12 +4821,18 @@ background-color: #a7baaa;
   float: none;
 }
 
-.float-left {
-  float: left;
+.align-left {
+  text-align: left;
 }
 
-.float-right {
-  float:right;
+.align-right {
+  text-align: right;
+  float: right;
+}
+
+.small-hr {
+  width: 25%;
+  margin: auto;
 }
 
 /* Media Queries */
@@ -4818,17 +4879,35 @@ background-color: #a7baaa;
 }
 }
 
+@media (min-width: 568px) {
+.featured-video h5,
+.featured-manga h5 {
+  font-size: 1.6rem;
+  height: 50px;
+}
+}
+
 @media (min-width: 768px) {
 .see-more {
   width: 25%;
 }
-.featured:nth-child(-n + 4) {
-  display: inline-block;
+.featured-video h5,
+.featured-manga h5 {
+  font-size: 1.8rem;
+  height: 50px;
 }
 }
 
 @media (min-width: 1024px) {
-  .featured:nth-last-child(n + 1) {
-    display: inline-block;
-  }
+.featured-video:last-child {
+  display: inline-block;
+}
+.featured-manga:last-child {
+  display: inline-block;
+}
+.featured-video h5,
+.featured-manga h5 {
+  font-size: 2.0rem;
+  height: 55px;
+}
 }
